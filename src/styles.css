@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import 'tailwindcss';
 
-/*HOLA*/
+
+
+@theme {
+    --font-display: 'Libre Baskerville','Times New Roman', serif;
+
+    /* Light theme colors */
+    --color-jagged-ice-50: #f3faf8;
+    --color-jagged-ice-100: #d7f0eb;
+    --color-jagged-ice-200: #bbe5dd;
+    --color-jagged-ice-300: #7fc9be;
+    --color-jagged-ice-400: #54ada2;
+    --color-jagged-ice-500: #3a9288;
+    --color-jagged-ice-600: #2d746e;
+    --color-jagged-ice-700: #275e5a;
+    --color-jagged-ice-800: #234c49;
+    --color-jagged-ice-900: #21403e;
+    --color-jagged-ice-950: #0e2524;
+
+
+/* Primary theme colors */
+    --color-fern-50: #f6f9f4;
+    --color-fern-100: #e8f3e5;
+    --color-fern-200: #d1e7cb;
+    --color-fern-300: #acd2a3;
+    --color-fern-400: #77b169;
+    --color-fern-500: #5c994e;
+    --color-fern-600: #487d3c;
+    --color-fern-700: #3b6332;
+    --color-fern-800: #32502b;
+    --color-fern-900: #294225;
+    --color-fern-950: #132310;
+
+/* Secondary theme colors */
+--color-fernier-50: #f8fbea;
+--color-fernier-100: #eef6d1;
+--color-fernier-200: #ddeda9;
+--color-fernier-300: #bddb63;
+--color-fernier-400: #accf4c;
+--color-fernier-500: #8fb42e;
+--color-fernier-600: #6f8f21;
+--color-fernier-700: #546e1d;
+--color-fernier-800: #45581c;
+--color-fernier-900: #3a4b1c;
+--color-fernier-950: #1e290a;
+
+/* Accent theme colors */
+--color-ming-50: #f1f9fa;
+--color-ming-100: #ddeef0;
+--color-ming-200: #bedee3;
+--color-ming-300: #91c6cf;
+--color-ming-400: #5da5b3;
+--color-ming-500: #418999;
+--color-ming-600: #3c7788;
+--color-ming-700: #335d6b;
+--color-ming-800: #314f59;
+--color-ming-900: #2c434d;
+--color-ming-950: #192b33;
+
+
+    
+
+   
+
+        /* figma colors
+        fondo-light:#BBE5DD
+        texto-light: #1B4079
+        fondo-dark:#203733
+        texto-dark:#BBE5DD
+        
+        primary-100:#77B169;
+        secondary-100:#BDDB63;
+        accent-100:#3C7788;
+    */
+}
+
+@layer base {
+    html {
+        min-height: 100vh;
+    }
+    
+    body {
+        @apply bg-jagged-ice-100 dark:bg-jagged-ice-900 min-h-screen;
+        font-family: 'Libre Baskerville', 'Times New Roman', serif;
+    }
+}
