@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ChangeDetectorRef} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,5 +8,40 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.css'
 })
 export class Header {
+
+  menuOpen = false;
+  isMobile = false;
+  
+  ngOnInit() {
+    this.checkViewport();
+  }
+
+  constructor(private cdr: ChangeDetectorRef) {
+  }
+
+ @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkViewport();
+  }
+
+  checkViewport() {
+    this.menuOpen=false;
+    this.isMobile = window.innerWidth <= 768;
+    this.cdr.detectChanges();  // << Notifica a Angular que actualice la vista
+  }
+
+  contactar() {
+    if (this.isMobile) {
+      console.log("Movil");
+    }
+    else {
+      console.log("No movil");
+    }
+
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
 }
