@@ -58,9 +58,35 @@
 --color-ming-900: #2c434d;
 --color-ming-950: #192b33;
 
+/* Animation */
+--animate-gliding: gliding 5s ease-in-out infinite;
 
-    
+@keyframes gliding {
+    0%, 100% {
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(25px);
+        transform: translateY(-10px);
+    }
+}
 
+--animate-hero-text: hero-text 0.25s ease-in-out forwards;
+@keyframes hero-text {
+    0% {
+        transform:rotate(-25deg) translateX(-20px);
+        transform-origin: left;
+    }
+    50%{
+        transform:rotate(10deg) translateX(-10px);
+        transform-origin: left;
+    }
+    100% {
+        transform: rotate(0deg) translateX(0px);
+        transform-origin: left;
+    }
+}
    
 
         /* figma colors

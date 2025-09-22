@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Header } from '../../components/header/header';
+import { TargetHero } from '../../components/target-hero/target-hero';
+
+
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, Header],
+  imports: [CommonModule, Header, TargetHero],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home {
+export class Home implements AfterViewInit {
 
   heroSplashText = [
     "programar",
@@ -18,13 +21,19 @@ export class Home {
     "jugar",
     "dormir",
     "comer",
-    "tambien prueba terraria",
+    "wizarding",
     "ver anime"
   ]
 
 
-  heroText: string = "programar";
+  heroTextActive:boolean=false;
+  heroText:string = "programar";
+  heroTextElement:HTMLElement | null = null;
 
+
+  ngAfterViewInit() {
+    this.heroTextElement = document.getElementById('hero-text');
+  }
 
   selectRandomText() {
     const randomIndex = Math.floor(Math.random() * this.heroSplashText.length);
@@ -33,6 +42,22 @@ export class Home {
 
   shootText()
   {
-    this.heroText = this.selectRandomText();
+    if(this.heroTextElement && !this.heroTextActive) 
+    {
+      this.heroTextActive = true; 
+      console.log("Shooting text animation",this.heroTextElement);
+      this.heroText = this.selectRandomText();
+      this.heroTextElement.classList.add('animate-hero-text');
+
+      setTimeout(() => {
+        this.heroTextActive = false;
+        if (this.heroTextElement) {
+          this.heroTextElement?.classList.remove('animate-hero-text');
+          
+        }
+    },300)
+    }
+      
+    
   }
 }
