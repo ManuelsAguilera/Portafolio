@@ -9,4 +9,30 @@ import { Header } from '../../components/header/header';
 })
 export class Home {
 
+  heroSplashText = [
+    "programar",
+    "estudiar",
+    "aprender",
+    "crear",
+    "hollow knight",
+    "jugar",
+    "dormir",
+    "comer",
+    "tambien prueba terraria",
+    "ver anime"
+  ]
+
+
+  heroText: string = "programar";
+
+
+  selectRandomText() {
+    const randomIndex = Math.floor(Math.random() * this.heroSplashText.length);
+    return this.heroSplashText[randomIndex];
+  }
+
+  shootText()
+  {
+    this.heroText = this.selectRandomText();
+  }
 }
