@@ -1,10 +1,23 @@
 <app-header></app-header>
+<div id="hero" class=" flex flex-col min-h-auto ">
 
-<main>
-    <section class="p-4 flex flex-col gap-4">
-        <h2>Home</h2>
-        <p class="text-lime-400">
-            Welcome this aint ionic!
-        </p>
-    </section>
-</main>
+
+    <div class="pt-20 pd-20 ml-auto mr-auto flex flex-row align-middle items-center">
+        <div class="col-start-4 ml-5 mr-5 ">
+                    <h1 class=" text-jagged-ice-50 xl:text-8xl md:text-6xl sm:text-4xl text-3xl" >
+                        Hola me gusta,<br><span >{{heroText}}</span>
+                    </h1>
+        </div>
+        <div class="col-end-6" >
+            <button (click)="shootText()">
+                <img src="https://marketplace.canva.com/HxUws/MAE4_hHxUws/1/tl/canva-archery-target-icon.-shoting-target-MAE4_hHxUws.png" alt="programando" class="h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80">
+            </button>
+            
+        </div>
+    </div>
+
+    
+
+
+</div>
+
