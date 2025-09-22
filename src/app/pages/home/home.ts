@@ -45,7 +45,6 @@ export class Home implements AfterViewInit {
     if(this.heroTextElement && !this.heroTextActive) 
     {
       this.heroTextActive = true; 
-      console.log("Shooting text animation",this.heroTextElement);
       this.heroText = this.selectRandomText();
       this.heroTextElement.classList.add('animate-hero-text');
 

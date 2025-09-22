@@ -88,6 +88,23 @@
     }
 }
    
+--animate-bullet: bullet 0.5s ease-in-out forwards;
+@keyframes bullet {
+    0% {
+        transform: scale(3);
+
+    }
+    40%
+    {
+        transform:scale(1.5)
+    }
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+
 
         /* figma colors
         fondo-light:#BBE5DD
@@ -100,6 +117,9 @@
         accent-100:#3C7788;
     */
 }
+
+
+
 
 @layer base {
     html {
