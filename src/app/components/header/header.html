@@ -26,11 +26,11 @@
             </div>
 
             <!-- Contacto-->
-            <button class="text-lg bg-fernier-300 text-ming-800 p-2 rounded-lg hover:bg-fernier-400" 
+            <button id="ContactButton" class="sm:textlg text-l bg-fernier-300 text-ming-800 p-1 rounded-lg hover:bg-fernier-400 " 
             (click)="contactar()">Contactame</button>
             
             <!-- Menu de paginas-->
-            <div class="inline-block" >
+            <div class="relative" >
                 <button (click)="toggleMenu()" class="inline-flex justify-center p-2 text-ming-800  dark:text-jagged-ice-100 hover:bg-fern-400 rounded-lg ">
                     
                 
@@ -44,12 +44,12 @@
             </div>
             @if (menuOpen)
             {
-                <div class="absolute top-16 right-10 bg-jagged-ice-100 dark:bg-jagged-ice-800 border border-jagged-ice-200 dark:border-jagged-ice-700 rounded-lg shadow-lg"
+                <div class="z-[9999] mt-5  absolute top-16 right-10 bg-jagged-ice-100 dark:bg-jagged-ice-800 border border-jagged-ice-200 dark:border-jagged-ice-700 rounded-lg shadow-lg"
                 (mouseleave)="toggleMenu()">
-                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Inicio</a>
-                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Hobbies</a>
-                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Habilidades</a>
-                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Proyectos</a>
+                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-ice-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Inicio</a>
+                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-ice-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Hobbies</a>
+                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-ice-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Habilidades</a>
+                    <a class="block px-4 py-2 text-ming-800 dark:text-jagged-ice-200 hover:bg-fern-200 dark:hover:bg-fern-700" href="#">Proyectos</a>
                 </div>
             }
     </nav>

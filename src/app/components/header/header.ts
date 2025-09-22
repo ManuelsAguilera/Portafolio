@@ -27,6 +27,15 @@ export class Header {
   checkViewport() {
     this.menuOpen=false;
     this.isMobile = window.innerWidth <= 768;
+
+    if ( window.innerWidth <= 400)
+    {
+      document.getElementById("ContactButton")?.classList.add("hidden");
+  
+    }
+    else {
+      document.getElementById("ContactButton")?.classList.remove("hidden");
+    }
     this.cdr.detectChanges();  // << Notifica a Angular que actualice la vista
   }
 
