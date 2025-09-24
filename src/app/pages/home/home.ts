@@ -2,11 +2,12 @@ import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Header } from '../../components/header/header';
 import { TargetHero } from '../../components/target-hero/target-hero';
+import { Building } from "../../components/building/building";
 
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, Header, TargetHero],
+  imports: [CommonModule, Header, TargetHero, Building],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
