@@ -44,7 +44,7 @@ export class Header {
 
     //Por ahora que simplemente envie a contactame
 
-    this.router.navigateByUrl('/contactame')
+    this.router.navigateByUrl('/contactame');
 
   }
 
