@@ -173,4 +173,86 @@ src/
 
 ---
 
+## Instrucciones para Code Reviews y Explicaciones
+
+**Idioma:** Todas las explicaciones de código, reviews y documentación deben estar en **español**.
+
+### Formato para Reviews de Código
+
+Cuando expliques cambios o hagas reviews, sigue esta estructura:
+
+**1. Resumen del Cambio**
+- Breve descripción de qué se modificó
+- Razón del cambio (bug fix, nueva funcionalidad, mejora, etc.)
+
+**2. Archivos Afectados**
+- Lista los archivos modificados
+- Menciona el tipo de cambio en cada archivo
+
+**3. Detalles Técnicos**
+- Explica la implementación técnica
+- Menciona patrones de Angular utilizados
+- Describe cambios en estilos/CSS si aplica
+- Indica si se añadieron nuevas dependencias
+
+**4. Impacto y Consideraciones**
+- Efectos en la UI/UX
+- Compatibilidad con responsive design
+- Performance implications
+- Posibles breaking changes
+
+**5. Pasos de Validación**
+- Cómo probar los cambios
+- Comandos específicos a ejecutar
+- Qué verificar en el navegador
+
+### Ejemplos de Explicaciones
+
+**Para nuevos componentes:**
+```
+Se creó el componente [NombreComponente] para [propósito]. Este componente utiliza 
+signals de Angular y está configurado como standalone. Se añadió la ruta 
+correspondiente en app.routes.ts y se actualizó la navegación en el header.
+```
+
+**Para cambios de estilos:**
+```
+Se modificaron los estilos en [archivo] para mejorar [aspecto]. Los cambios incluyen 
+nuevas clases de TailwindCSS y custom properties para el tema dark/light. 
+Es compatible con dispositivos móviles y desktop.
+```
+
+**Para fixes de bugs:**
+```
+Se solucionó el problema de [descripción del bug] que ocurría cuando [condición]. 
+La solución implementa [método utilizado] y es retrocompatible con el código existente.
+```
+
+### Términos Técnicos en Español
+
+Usa estos términos consistentemente:
+- **Componente** (no "component")
+- **Enrutamiento** (no "routing") 
+- **Plantilla** (no "template")
+- **Servicio** (no "service")
+- **Directiva** (no "directive")
+- **Pipe/Tubería** (no "pipe")
+- **Señal** (no "signal")
+- **Responsivo** (no "responsive")
+- **Compilación** (no "build")
+- **Despliegue** (no "deploy")
+
+### Nivel de Detalle
+
+**Para cambios menores:** Explicación concisa de 2-3 líneas
+**Para cambios importantes:** Explicación detallada con contexto y justificación
+**Para nuevas funcionalidades:** Documentación completa incluyendo ejemplos de uso
+
+**Siempre incluye:**
+- Por qué se hizo el cambio
+- Cómo implementarlo/probarlo
+- Qué esperar como resultado
+
+---
+
 **Trust these instructions** - they are comprehensive and tested. Only search the codebase if you encounter information gaps or errors in these instructions.
