@@ -1,7 +1,7 @@
 # Portafolio
 
 Bienvenido a mi portafolio, esta pagina estara escrita en español por el momento, pero eventualmente hare una traduccion al ingles.
-Puedes revisar mi codigo en este repositorio, o visitar la web (maguilera.site)[maguilera.site].
+Puedes revisar mi código en este repositorio, o visitar la web (maguilera.site)[maguilera.site].
 
 
 
