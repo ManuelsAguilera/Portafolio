@@ -28,7 +28,11 @@
           },
           "configurations": {
             "production": {
-              
+              "optimization": {
+                "fonts": {
+                  "inline": false
+                }
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -80,14 +84,6 @@
               "src/styles.css"
             ]
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "base-href": "/",
-            "cname": "maguilera.site"
-          }
-
         }
       }
     }

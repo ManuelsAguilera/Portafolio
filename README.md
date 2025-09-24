@@ -57,3 +57,15 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Deployment
+
+This project uses secure GitHub Actions-based deployment to GitHub Pages. Deployment happens automatically when changes are pushed to the `main` branch.
+
+For detailed information about the deployment process, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### Quick Deployment Info
+- 🚀 **Auto-deploy**: Push to `main` branch
+- 🔒 **Secure**: Uses GitHub's built-in authentication
+- 🌐 **Live site**: [maguilera.site](https://maguilera.site)
+- ❌ **No local deploy**: For security, local deployment has been disabled
