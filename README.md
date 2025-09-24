@@ -1,6 +1,6 @@
 # Portafolio
 
-Bienvenido a mi portafolio, esta pagina estara escrita en español por el momento, pero eventualmente hare una traduccion al ingles.
+Bienvenido a mi portafolio, esta página estará escrita en español por el momento, pero eventualmente haré una traducción al inglés.
 Puedes revisar mi código en este repositorio, o visitar la web (maguilera.site)[maguilera.site].
 
 
