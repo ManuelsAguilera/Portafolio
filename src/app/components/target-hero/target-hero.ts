@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 
 class TargetPoint {
 
@@ -14,6 +14,8 @@ class TargetPoint {
   ) {}
 
 
+
+
 getTargetHTML(): HTMLElement {
     const div = document.createElement('div');
     
@@ -22,10 +24,12 @@ getTargetHTML(): HTMLElement {
                 + ' pointer-events-none z-50 animate-bullet';
 
     
+    var scrollX = window.scrollX || document.documentElement.scrollLeft;
+    var scrollY = window.scrollY || document.documentElement.scrollTop;
     // Posición
-    div.style.left = `${this.x}px`;
-    div.style.top = `${this.y}px`;
-    
+    div.style.left = `${this.x+scrollX}px`;
+    div.style.top = `${this.y+scrollY}px`;
+
     this.element = div;
     return div;
   }
