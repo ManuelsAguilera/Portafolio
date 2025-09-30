@@ -22,8 +22,17 @@ getTargetHTML(): HTMLElement {
                 + ' pointer-events-none z-50 animate-bullet';
 
     
+
+    //Sumar el scroll
+    const scrollX = window.scrollX || window.pageXOffset;
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    this.x += scrollX;
+    this.y += scrollY;
+
+
     // Posición
-    div.style.left = `${this.x}px`;
+    div.style.left = `${this.x}px` ;
     div.style.top = `${this.y}px`;
     
     this.element = div;
